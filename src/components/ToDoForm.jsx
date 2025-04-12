@@ -15,14 +15,20 @@ export default function ToDoForm({ listItems, setListItems }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const item = { ...form, id: Date.now() };
-
+    if (form.text.trim() === "") {
+      alert("Inserisci un testo!");
+      return;
+    }
     setListItems((prev) => [...prev, item]);
     setForm({ id: null, text: "", done: false });
   };
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="border rounded-md p-5">
+      <form
+        onSubmit={handleSubmit}
+        className="border rounded-md p-5 max-w-[250px] w-72"
+      >
         <div className="flex flex-col gap-3">
           <input
             className="bg-zinc-500 rounded-md p-1 "
@@ -33,7 +39,7 @@ export default function ToDoForm({ listItems, setListItems }) {
             type="text"
           />
           <div>
-            <label>Done</label>
+            <label>Fatta</label>
             <input
               className="ml-3"
               name="done"
@@ -43,7 +49,7 @@ export default function ToDoForm({ listItems, setListItems }) {
             />
           </div>
 
-          <button type="submit">Save</button>
+          <button type="submit">Salva</button>
         </div>
       </form>
     </>
