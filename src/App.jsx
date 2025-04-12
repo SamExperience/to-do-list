@@ -3,11 +3,15 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 
-import ToDoList from "./components/ToDoList";
+import ToDoForm from "./components/ToDoForm";
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <></>;
+  const [listItems, setListItems] = useState([]);
+  const isLogged = false;
+  return (
+    <>
+      <ToDoForm listItems={listItems} setListItems={setListItems}></ToDoForm>
+    </>
+  );
 }
 
 export default App;
