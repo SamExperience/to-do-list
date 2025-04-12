@@ -1,5 +1,5 @@
 import React from "react";
-export default function ToDoItem({ item }) {
+export default function ToDoItem({ item, setDoneItem }) {
   return (
     <>
       <div className="flex flex-col overflow-hidden gap-2 bg-zinc-950 justify-between items-start p-2 border border-zinc-700 shadow rounded-lg min-h-[50px] min-w-[100px] h-20 w-50  ">
@@ -12,6 +12,7 @@ export default function ToDoItem({ item }) {
             className="ml-3"
             name="done"
             checked={item.done}
+            onChange={() => setDoneItem(item.id)}
             type="checkbox"
           />
         </div>

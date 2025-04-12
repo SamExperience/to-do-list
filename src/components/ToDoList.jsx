@@ -1,7 +1,7 @@
 import React from "react";
 import ToDoItem from "./ToDoItem";
 
-export default function ToDoList({ listItems }) {
+export default function ToDoList({ listItems, setDoneItem }) {
   return (
     <>
       {listItems.length === 0 ? (
@@ -17,7 +17,7 @@ export default function ToDoList({ listItems }) {
             <ul className="grid grid-cols-3 gap-5">
               {listItems.map((item) => (
                 <li key={item.id}>
-                  <ToDoItem item={item}></ToDoItem>
+                  <ToDoItem item={item} setDoneItem={setDoneItem}></ToDoItem>
                 </li>
               ))}
             </ul>
