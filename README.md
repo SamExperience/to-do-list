@@ -1,12 +1,86 @@
-# React + Vite
+# 📝 To-Do List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una semplice applicazione React per gestire le attività quotidiane.  
+Permette di aggiungere, completare, filtrare ed eliminare attività.
 
-Currently, two official plugins are available:
+## 🚀 Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👉 [Vai al repository su GitHub](https://github.com/SamExperience/to-do-list.git)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📦 Installazione
+
+1. Clona il repository:
+
+```bash
+git clone https://github.com/SamExperience/to-do-list.git
+```
+
+2. Entra nella cartella del progetto:
+
+```bash
+cd to-do-list
+```
+
+3. Installa le dipendenze:
+
+```bash
+npm install
+```
+
+4. Avvia il progetto:
+
+```bash
+npm run dev
+```
+
+> ⚠️ Assicurati di avere **Node.js** e **npm** installati sul tuo sistema.
+
+---
+
+## 💠 Funzionalità
+
+- ✅ Aggiunta di nuove attività
+- 🔁 Marcatura attività come completate
+- 🗑 Eliminazione singola o multipla
+- 🔍 Filtri: tutte, attive, completate
+- 🩼 Pulizia lista attività con selettore
+
+---
+
+## 🧪 Tecnologie usate
+
+- **React**
+- **Vite**
+- **Tailwind CSS**
+
+---
+
+## 📂 Struttura del progetto
+
+```
+to-do-list/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── ToDoItem.jsx
+│   │   └── ToDoList.jsx
+│   ├── App.jsx
+│   └── main.jsx
+├── package.json
+└── tailwind.config.js
+```
+
+---
+
+## 📬 Contatti
+
+Creato con 💙 da [SamExperience](https://github.com/SamExperience)
+
+---
+
+## 💾 Licenza
+
+Questo progetto è distribuito sotto licenza **MIT**.
+
