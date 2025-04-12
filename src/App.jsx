@@ -5,6 +5,7 @@ import "./App.css";
 
 import ToDoForm from "./components/ToDoForm";
 import ToDoList from "./components/ToDoList";
+import { list } from "postcss";
 
 function App() {
   const [listItems, setListItems] = useState([]);
@@ -15,10 +16,18 @@ function App() {
     );
     setListItems(newList);
   };
+  const deleteItem = (id) => {
+    const newList = listItems.filter((item) => item.id !== id);
+    setListItems(newList);
+  };
   return (
     <>
       <div className="flex flex-col items-center">
-        <ToDoList listItems={listItems} setDoneItem={setDoneItem}></ToDoList>
+        <ToDoList
+          listItems={listItems}
+          setDoneItem={setDoneItem}
+          deleteItem={deleteItem}
+        ></ToDoList>
         <ToDoForm listItems={listItems} setListItems={setListItems}></ToDoForm>
       </div>
     </>
